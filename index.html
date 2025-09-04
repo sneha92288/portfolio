@@ -359,9 +359,100 @@
             transition: width 2s ease-in-out;
         }
 
+        /* Certifications Section */
+        .certifications {
+            background: var(--light);
+        }
+
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+        }
+
+        .cert-category {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .cert-category:hover {
+            transform: translateY(-5px);
+        }
+
+        .cert-category h3 {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            border-bottom: 2px solid rgba(102, 126, 234, 0.1);
+            padding-bottom: 1rem;
+        }
+
+        .cert-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .cert-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05));
+            border-radius: 15px;
+            border-left: 4px solid var(--primary);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cert-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+        }
+
+        .cert-badge {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .cert-info h4 {
+            font-size: 1.1rem;
+            color: var(--text);
+            margin-bottom: 0.3rem;
+            font-weight: 600;
+        }
+
+        .cert-issuer {
+            color: var(--primary);
+            font-weight: 500;
+            font-size: 0.9rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .cert-date {
+            color: var(--text-light);
+            font-size: 0.85rem;
+        }
+
         /* Experience Section */
         .experience {
-            background: var(--light);
+            background: var(--dark);
+            color: white;
         }
 
         .timeline {
@@ -415,6 +506,7 @@
             border-radius: 15px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
+            color: var(--text);
         }
 
         .timeline-content:hover {
@@ -597,6 +689,20 @@
                 grid-template-columns: 1fr;
             }
 
+            .certifications-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cert-category {
+                padding: 1.5rem;
+            }
+
+            .cert-item {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+
             .cta-buttons {
                 flex-direction: column;
                 align-items: center;
@@ -636,8 +742,8 @@
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
                 <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
             <div class="hamburger" id="hamburger">
@@ -829,6 +935,203 @@
         </div>
     </section>
 
+    <!-- Certifications Section -->
+    <section id="certifications" class="section certifications">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Certifications</h2>
+                <p>Professional certifications validating my expertise</p>
+            </div>
+            <div class="certifications-grid">
+                <div class="cert-category fade-in">
+                    <h3><i class="fab fa-aws"></i> AWS Certifications</h3>
+                    <div class="cert-list">
+                        <div class="cert-item">
+                            <div class="cert-badge">
+                                <i class="fab fa-aws"></i>
+                            </div>
+                            <div class="cert-info">
+                                <h4>AWS Cloud Practitioner</h4>
+                                <p class="cert-issuer">Amazon Web Services</p>
+                                <p class="cert-date">Certified</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cert-category fade-in">
+                    <h3><i class="fab fa-microsoft"></i> Azure Certifications</h3>
+                    <div class="cert-list">
+                        <div class="cert-item">
+                            <div class="cert-badge">
+                                <i class="fab fa-microsoft"></i>
+                            </div>
+                            <div class="cert-info">
+                                <h4>Azure DevOps Engineer</h4>
+                                <p class="cert-issuer">Microsoft</p>
+                                <p class="cert-date">Certified</p>
+                            </div>
+                        </div>
+                        <div class="cert-item">
+                            <div class="cert-badge">
+                                <i class="fab fa-microsoft"></i>
+                            </div>
+                            <div class="cert-info">
+                                <h4>Azure Administrator Associate</h4>
+                                <p class="cert-issuer">Microsoft</p>
+                                <p class="cert-date">Certified</p>
+                            </div>
+                        </div>
+                        <div class="cert-item">
+                            <div class="cert-badge">
+                                <i class="fab fa-microsoft"></i>
+                            </div>
+                            <div class="cert-info">
+                                <h4>Azure Developer Associate</h4>
+                                <p class="cert-issuer">Microsoft</p>
+                                <p class="cert-date">Certified</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cert-category fade-in">
+                    <h3><i class="fas fa-dharmachakra"></i> Kubernetes & Infrastructure</h3>
+                    <div class="cert-list">
+                        <div class="cert-item">
+                            <div class="cert-badge">
+                                <i class="fas fa-dharmachakra"></i>
+                            </div>
+                            <div class="cert-info">
+                                <h4>Certified Kubernetes Administrator (CKA)</h4>
+                                <p class="cert-issuer">Cloud Native Computing Foundation</p>
+                                <p class="cert-date">Certified</p>
+                            </div>
+                        </div>
+                        <div class="cert-item">
+                            <div class="cert-badge">
+                                <i class="fas fa-cube"></i>
+                            </div>
+                            <div class="cert-info">
+                                <h4>HashiCorp Terraform Associate</h4>
+                                <p class="cert-issuer">HashiCorp</p>
+                                <p class="cert-date">Certified</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cert-category fade-in">
+                    <h3><i class="fas fa-cloud"></i> Oracle Cloud</h3>
+                    <div class="cert-list">
+                        <div class="cert-item">
+                            <div class="cert-badge">
+                                <i class="fas fa-cloud"></i>
+                            </div>
+                            <div class="cert-info">
+                                <h4>OCI 2023 Certified Architect Associate</h4>
+                                <p class="cert-issuer">Oracle</p>
+                                <p class="cert-date">2023</p>
+                            </div>
+                        </div>
+                        <div class="cert-item">
+                            <div class="cert-badge">
+                                <i class="fas fa-cloud"></i>
+                            </div>
+                            <div class="cert-info">
+                                <h4>OCI 2023 Multicloud Architect Associate</h4>
+                                <p class="cert-issuer">Oracle</p>
+                                <p class="cert-date">2023</p>
+                            </div>
+                        </div>
+                        <div class="cert-item">
+                            <div class="cert-badge">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <div class="cert-info">
+                                <h4>OCI 2023 DevOps Professional</h4>
+                                <p class="cert-issuer">Oracle</p>
+                                <p class="cert-date">2023</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cert-category fade-in">
+                    <h3><i class="fas fa-shield-alt"></i> Security & Networking</h3>
+                    <div class="cert-list">
+                        <div class="cert-item">
+                            <div class="cert-badge">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="cert-info">
+                                <h4>NSE1 Network Security Associate</h4>
+                                <p class="cert-issuer">Fortinet</p>
+                                <p class="cert-date">Certified</p>
+                            </div>
+                        </div>
+                        <div class="cert-item">
+                            <div class="cert-badge">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="cert-info">
+                                <h4>NSE2 Network Security Associate</h4>
+                                <p class="cert-issuer">Fortinet</p>
+                                <p class="cert-date">Certified</p>
+                            </div>
+                        </div>
+                        <div class="cert-item">
+                            <div class="cert-badge">
+                                <i class="fas fa-network-wired"></i>
+                            </div>
+                            <div class="cert-info">
+                                <h4>Introduction to Cybersecurity</h4>
+                                <p class="cert-issuer">Cisco</p>
+                                <p class="cert-date">Certified</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cert-category fade-in">
+                    <h3><i class="fas fa-tools"></i> DevOps & Development</h3>
+                    <div class="cert-list">
+                        <div class="cert-item">
+                            <div class="cert-badge">
+                                <i class="fas fa-code-branch"></i>
+                            </div>
+                            <div class="cert-info">
+                                <h4>Jenkins: Automating Delivery Pipeline</h4>
+                                <p class="cert-issuer">Coursera</p>
+                                <p class="cert-date">Certified</p>
+                            </div>
+                        </div>
+                        <div class="cert-item">
+                            <div class="cert-badge">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="cert-info">
+                                <h4>Splunk 7.x Fundamentals Part 1</h4>
+                                <p class="cert-issuer">Splunk</p>
+                                <p class="cert-date">Certified</p>
+                            </div>
+                        </div>
+                        <div class="cert-item">
+                            <div class="cert-badge">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="cert-info">
+                                <h4>Programming Foundations: Fundamentals</h4>
+                                <p class="cert-issuer">LinkedIn Learning</p>
+                                <p class="cert-date">Certified</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Experience Section -->
     <section id="experience" class="section experience">
         <div class="container">
@@ -901,13 +1204,6 @@
                         <div>
                             <h4>Email</h4>
                             <p>lavishettisneha@gmail.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h4>Phone</h4>
-                            <p>+91 8160-633765</p>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -1224,3 +1520,13 @@
     </script>
 </body>
 </html>
+                            </div>
+                            <div class="cert-info">
+                                <h4>AWS Developer Associate</h4>
+                                <p class="cert-issuer">Amazon Web Services</p>
+                                <p class="cert-date">Issued: Jan 2022</p>
+                            </div>
+                        </div>
+                        <div class="cert-item">
+                            <div class="cert-badge">
+                                <i class="fab fa-aws"></i>
